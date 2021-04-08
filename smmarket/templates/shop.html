@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+  <form class="d-flex input-group w-25 float-end">
+    <input type="search" class="form-control" id="myInput" placeholder="SEACH HERE..." aria-label="Search"/>
+  </form>
+
+  <br/><br/><br/>
+    <div class="row row-cols-1 row-cols-md-4 g-4" id="mycard">
+      {% for card in allcards %}
+      <div class="col" >
+        <div class="card h-100" id="{{card.id}}">
+          <img id="card-heig" src="{{card.img.url}}" class="card-img-top" alt="..."/>
+          <div class="card-body text-black text-center">
+            <h5 >{{card.title}}</h5>
+            <h5 >&#8377; {{card.price}}</h5>
+          </div>
+          
+          <br/>
+          
+          <form action="/SmMarket/shop/" method="POST">
+            {% csrf_token %}
+            <input hidden type="text" name="product" value="{{card.id}}">
+            <button type="submit"  class="btn btn-outline-primary btn-block">ADD TO CART</button>
+        </form>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  
+    <br/><br/>
+
+{% endblock %}

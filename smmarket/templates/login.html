@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-4 w-50">
+    <form class="was-validated" action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        {% if error%}
+                <div class="alert alert-danger" role="alert">
+                    {{error}}
+                </div>
+                {% endif %}
+                <div class="col-lg-8 mt-4 border p-5 bg-set mx-auto rounded pt-4">
+        <div class="mb-3 pb-1">
+          
+          <h2 class="text-center">LOGIN HERE</h2><br/>
+          <div class="form-outline">
+            <input class="form-control is-valid" name="email" id="validationName" value="{{values.email}}" required/>
+            <label for="validationName" class="form-label">E-MAIL</label>
+          </div>
+        </div>
+        <div class="mb-3 pb-1">
+            <div class="form-outline">
+              <input type="password" class="form-control is-valid" name="password" id="validationName" required/>
+              <label for="validationName" class="form-label">PASSWORD</label>
+            </div>
+          </div>
+          <div class="mb-3 text-center">
+            <a class="btn btn-primary m-right" href="{% url 'signup' %}">SIGNUP</a>
+            <button class="btn btn-primary  " type="submit">LOGIN</button>
+          </div>
+            
+
+        </div>
+    </form>
+    </div>
+  
+
+{% endblock %}

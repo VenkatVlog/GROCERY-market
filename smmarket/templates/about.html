@@ -1,0 +1,56 @@
+{% block contet %}
+{% load static %}
+<h2 class="text-center">ABOUT US</h2><br/><hr><br/><br/>
+<div class="row">
+    <div class="col-md-4">
+    <img src="{% static 'images/crops.webp' %}" class="w-75  rounded-3 " alt="crop image">
+</div>
+<div class="col-md-8">
+    <h4 class="font-weight-bold text-center ">WE PROVIDE YOU FRESH AND ORGANIC FOOD </h4><br/>
+    <h5 class="font-weight-bold ">
+        Organic foods are grown either by natural means, without chemical fertilizers 
+        or obtained from nature. Such farming methods can produce organic foods in a fairly 
+        clean and safe manner and are also very beneficial for human health. Organic foods are 
+        free from any type of chemical fertilizers and pesticides. In addition, organic fertilizers 
+        are used in place of chemical fertilizers and mainly these fertilizers are used only in organic farming.</h5>
+    </div>
+</div>
+<br/><br/><br/>
+<div class="row">
+    
+<div class="col-md-8">
+    <h4 class="font-weight-bold text-center ">ABOUT ORGANIC FARMING</h4><br/>
+    <h5 class="font-weight-bold ">
+        In many countries, only organic farming is legally recognized, which is determined by 
+        the International Federation of Organic Agriculture Movements. Any food sold as organic 
+        food in India has to meet national organic food production standards, which are governed by 
+        the Agricultural and Processed Food Products Development Authority.
+        <br/>
+        The biggest feature of organic diet is that they do not have any side effects on the body. No chemical, 
+        pesticides, drugs or preservatives have been used in it. It contains essential elements like vitamins, 
+        minerals, protein, calcium, iron etc. These are the things that keep the body healthy.</h5>
+    </div>
+    <div class="col-md-4">
+        <img src="{% static 'images/crop.jpg' %}" class="w-75 right  rounded-3" alt="crop image">
+    </div>
+</div>
+<br/><br/><br/>
+    <div class="row text-primary text-center font-weight-bold">
+        <div class="col-4">
+            <h2><i class="fas fa-shopping-bag fa-2x text-black"></i></h2>
+            <h5 class="">PICK UP OPTIONS</h5>
+            <p class="text-dark">I'm a  class="text-dark"aragraph. Click here to add your own text and edit me. Let your users get to know you.</p>
+        </div>
+        <div class="col-4">
+            <h2><i class="fas fa-shipping-fast fa-2x text-black"></i></h2>
+            <h5>SAME DAY DELIVERY</h5>
+            <p class="text-dark">I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</p>
+        </div>
+        <div class="col-4">
+            <h2><img src="{% static 'images/download.png' %}" alt="" style="height: 63px;width: 72px;"></h2>
+            <h5>HEALTHY & SAFTEY RULES</h5>
+            <p class="text-dark">I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</p>
+        </div>
+      </div>
+
+{% endblock %}

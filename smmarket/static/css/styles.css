@@ -1,0 +1,58 @@
+
+.badge-notification{
+    font-size:18px;
+    position: relative !important;
+    display: inline-block !important;
+    top: -10px !important;
+    right: 27px !important;
+}
+.navbar {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-top: unset;
+    background-color:#fff;
+    z-index:9;
+    border-radius:0;
+    border-color:transparent;
+  }
+.btn{
+    font-size:15px;
+}
+.text-green{
+    color:black;
+    -webkit-text-stroke: 2px white;
+}
+#card-heig{
+    height: 50%;
+    width: 50%;
+    margin: 18px 0 18px 63px;
+}
+.out-line{
+    border:none !important;
+    box-shadow: none !important;
+    background-color:unset !important;
+    text-align: center;
+    font-weight: bold;
+    caret-color: transparent;
+}
+.outline-border{
+    border: 1px solid black;
+    border-radius: 9px;
+    background-color:unset !important;
+    width: 162px ;
+    margin: 0 auto;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.bg-set{
+    background-color:#faf7f9;
+}
+.m-right{
+    margin-right: 27px;
+}

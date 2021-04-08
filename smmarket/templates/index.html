@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!-- Carousel wrapper -->
+
+<div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+  <ol class="carousel-indicators">
+      {% for obj in carousel %}
+          {% if forloop.first %}
+              <li data-mdb-target="#carouselBasicExample" data-mdb-slide-to="{{forloop.counter0}}" class="active"></li>
+          {% else %}
+              <li data-mdb-target="#carouselBasicExample" data-mdb-slide-to="{{forloop.counter0}}"></li>
+
+          {% endif %}
+      {% endfor %}
+    
+  </ol>
+  <div class="carousel-inner">
+      {% for obj in carousel %}
+          {% if forloop.first %}
+              <div class="carousel-item active  ">
+          {% else %}
+              <div class="carousel-item  ">
+          {% endif %}
+          <img class="d-block w-100 h-50" class="h-50 d-inline-block" src="{{ obj.img.url}}" alt="">
+          <div class="carousel-caption">
+            <div class="animated fadeInDown delay-1s">
+              <h5 class="display-3 text-green font-weight-bold">{{obj.heading}}</h5>
+              <p class="display-6 text-green font-weight-bold">{{obj.paragraph}}</p>
+            </div>
+            <br/>
+            <a href="{% url 'shop' %}"><div class="btn btn-primary">SHOP NOW</div></a>
+          </div>
+          </div>
+      {% endfor %}
+      
+  </div>
+
+<!-- Controls -->
+<a class="carousel-control-prev" href="#carouselBasicExample" role="button" data-mdb-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselBasicExample" role="button" data-mdb-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Next</span>
+</a>
+</div>
+
+<!-- Carousel wrapper -->
+<br/><br/><br/>
+
+<!--ABOUT US-->
+<div id="about" class="container text-dark ">
+  
+    {% include 'about.html' %}
+
+</div>
+<!--CONTACT US-->
+<!--FOOTER-->
+<footer id="contact" class="bg-dark text-center text-white">
+{% include 'contactus.html' %}
+</footer>
+
+{% endblock %}
